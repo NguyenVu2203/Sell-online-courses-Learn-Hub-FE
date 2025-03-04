@@ -153,13 +153,10 @@
                 <div class="font-35"><i class="bx bx-bell"></i></div>
                 <div class="ms-3">
                   <div class="fs-5">
-                    Với mong muốn mang đến kiến thức chất lượng, miễn phí cho
-                    mọi người, với tâm huyết phá bỏ rào cản kiến thức từ việc
-                    giáo dục thu phí. Chúng tôi - DZFullStack đã lập nên trang
-                    website này để thế giới phẳng hơn. Bất cứ ai có mong muốn
-                    khai phá thế giới. Phá bỏ mọi thứ ngăn cản sự phát triển tất
-                    yếu bền vững của xã hội đều là DZer (Thành viên của
-                    DZFullStack).
+                    Learn luôn trân trọng và yêu quý từng khách hàng vì đã ủng
+                    hộ. Mọi đánh giá và nhận xét đều góp phần tích cực cải thiện
+                    dịch vụ và khoá học ngày càng tiến bộ. Chúng tôi tự là nhà
+                    một trong những trang Web uy tín hàng đầu.
                   </div>
                 </div>
               </div>
@@ -176,7 +173,7 @@
           </h2>
           <p>
             Các khóa học lập trình online
-            <span class="text-warning">PRO</span> vừa được DZFullStack ra mắt
+            <span class="text-warning">Popular</span> nhất của Learn Hub
           </p>
         </div>
         <div class="col-lg-12 mt-2">
@@ -272,11 +269,11 @@
                     khó, đây là nơi giúp các lập trình viên thực hành và luyện
                     code.
                   </p>
-                  <a class="btn btn-lg btn-danger px-5 radius-30"
+                  <!-- <a class="btn btn-lg btn-danger px-5 radius-30"
                     >Trắc nghiệm</a
                   >
                   <a class="btn btn-lg btn-dark px-5 radius-30">Bài tập</a>
-                  <a class="btn btn-lg btn-info px-5 radius-30">Video</a>
+                  <a class="btn btn-lg btn-info px-5 radius-30">Video</a> -->
                 </div>
                 <img
                   src="https://zendvn.com/frontend/assets/images/background/index_background_link_to_resources_02.png"
@@ -296,8 +293,7 @@
           </h2>
           <p>
             Các khóa học lập trình online
-            <span class="text-danger">MIỄN PHÍ</span> vừa được DZFullStack ra
-            mắt.
+            <span class="text-danger">MIỄN PHÍ</span> cho người mới
           </p>
           <p>
             Nội dung chi tiết trong từng video cung cấp đầy đủ kiến thức chuyên
@@ -739,8 +735,9 @@
             BÀI VIẾT CỦA CHÚNG TÔI <i class="fa-regular fa-newspaper"></i>
           </h2>
           <p>
-            DZFullStack tổng hợp bài viết kiến thức lập trình, thông báo và tin
-            tức
+            Learn Hub luôn quan tâm đến bạn và đã tổng hợp các bài viết về kiến
+            thức lập trình, thông báo quan trọng cùng những tin tức khác mới
+            nhất.
           </p>
         </div>
         <div class="col-lg-12 mt-2">
@@ -940,9 +937,11 @@
           </div>
         </div>
         <div class="col-lg-12 text-center">
-          <button class="btn btn-lg btn-outline-secondary radius-30 px-5">
-            Xem thêm
-          </button>
+          <router-link to="/bai-viet">
+            <button class="btn btn-lg btn-outline-secondary radius-30 px-5">
+              Xem thêm
+            </button>
+          </router-link>
         </div>
       </div>
     </div>

@@ -79,7 +79,9 @@
                           <p class="text-secondary mb-1">
                             {{ thong_tin.email }}
                           </p>
-                          <p class="text-muted font-size-sm">32 Xuân Diệu</p>
+                          <p class="text-muted font-size-sm">
+                            {{ formatDate_DOB(thong_tin.ngay_sinh) }}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -130,7 +132,7 @@
                       </div>
                       <div class="row mb-3">
                         <div class="col-lg-3">
-                          <h6 class="mb-0">Địa Chỉ</h6>
+                          <h6 class="mb-0">Ngày Sinh</h6>
                         </div>
                         <div class="col-lg-9 text-secondary">
                           <input
@@ -322,6 +324,9 @@ export default {
   methods: {
     formatDate(thoi_gian) {
       return dayjs(thoi_gian).format("DD/MM/YYYY vào lúc HH:mm:ss");
+    },
+    formatDate_DOB(thoi_gian) {
+      return dayjs(thoi_gian).format("DD/MM/YYYY");
     },
     formatVND(number) {
       return new Intl.NumberFormat("vi-VI", {
