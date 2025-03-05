@@ -24,6 +24,7 @@
                         v-model="tai_Khoan.email"
                         type="text"
                         class="form-control"
+                        placeholder="Nhập email của bạn"
                       />
                     </div>
                   </div>
@@ -35,9 +36,16 @@
                       ></span>
                       <input
                         v-model="tai_Khoan.password"
-                        type="text"
+                        :type="passwordFieldType"
                         class="form-control"
+                        placeholder="Nhập mật khẩu"
                       />
+                      <span
+                        class="input-group-text cursor-pointer"
+                        @click="togglePasswordVisibility"
+                      >
+                        <i :class="passwordIcon"></i>
+                      </span>
                     </div>
                   </div>
                   <div class="col-12">
@@ -95,6 +103,10 @@ export default {
         email: "",
         password: "",
       },
+
+      passwordFieldType: "password",
+
+      passwordIcon: "fa-solid fa-eye-slash",
     };
   },
   mounted() {
@@ -110,6 +122,15 @@ export default {
     document.head.appendChild(recaptchaScript);
   },
   methods: {
+    togglePasswordVisibility() {
+      if (this.passwordFieldType === "password") {
+        this.passwordFieldType = "text";
+        this.passwordIcon = "fa-solid fa-eye";
+      } else {
+        this.passwordFieldType = "password";
+        this.passwordIcon = "fa-solid fa-eye-slash";
+      }
+    },
     dangNhap() {
       let code = grecaptcha.getResponse();
       if (!code) {
@@ -170,12 +191,6 @@ export default {
             this.$toast.error(res.data.message);
           }
         });
-      // .catch((res) => {
-      //     const list = Object.values(res.response.data.errors);
-      //     list.forEach((v, i) => {
-      //         this.$toast.error(v[0]);
-      //     });
-      // })
     },
   },
 };

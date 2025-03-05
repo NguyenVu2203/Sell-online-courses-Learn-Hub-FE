@@ -50,19 +50,43 @@
                   </div>
                   <div class="col-6">
                     <label class="mb-2">Mật Khẩu</label>
-                    <input
-                      v-model="create.password"
-                      type="password"
-                      class="form-control"
-                    />
+                    <div class="input-group">
+                      <input
+                        v-model="create.password"
+                        :type="showPassword ? 'text' : 'password'"
+                        class="form-control"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        @click="togglePassword"
+                      >
+                        <i
+                          :class="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+                          class="fa password-toggle-icon"
+                        ></i>
+                      </button>
+                    </div>
                   </div>
                   <div class="col-6">
                     <label class="mb-2">Nhập Lại Mật Khẩu</label>
-                    <input
-                      v-model="create.re_password"
-                      type="password"
-                      class="form-control"
-                    />
+                    <div class="input-group">
+                      <input
+                        v-model="create.re_password"
+                        :type="showPassword ? 'text' : 'password'"
+                        class="form-control"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        @click="toggleRePassword"
+                      >
+                        <i
+                          :class="showRePassword ? 'fa-eye' : 'fa-eye-slash'"
+                          class="fa password-toggle-icon"
+                        ></i>
+                      </button>
+                    </div>
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
@@ -94,6 +118,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import axios from "axios";
 
@@ -108,6 +133,8 @@ export default {
         so_dien_thoai: "",
         ngay_sinh: "",
       },
+      showPassword: false,
+      showRePassword: false,
     };
   },
   mounted() {},
@@ -136,7 +163,20 @@ export default {
           });
         });
     },
+    togglePassword() {
+      this.showPassword = !this.showPassword;
+    },
+    toggleRePassword() {
+      this.showRePassword = !this.showRePassword;
+    },
   },
 };
 </script>
-<style></style>
+
+<style>
+.password-toggle-icon {
+  font-size: 12px;
+  padding-left: 5px;
+  line-height: 1.5;
+}
+</style>
