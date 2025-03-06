@@ -3,7 +3,7 @@
     <div class="row row-cols-lg-2">
       <div class="col mx-auto">
         <div class="mb-4 text-center">
-          <img src="/src/assets/img/LH_vip.png" width="200" alt="" />
+          <img src="/src/assets/img/LH_vip.png" width="180" alt="" />
         </div>
         <div class="card">
           <div class="card-body">
