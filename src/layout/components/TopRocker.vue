@@ -11,7 +11,7 @@
             />
           </div>
           <div>
-            <h4 class="logo-text">Rocker</h4>
+            <h4 class="logo-text">Learn Hub</h4>
           </div>
         </router-link>
       </div>

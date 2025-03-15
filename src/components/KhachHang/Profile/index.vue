@@ -69,7 +69,7 @@
                         class="d-flex flex-column align-items-center text-center"
                       >
                         <img
-                          src="https://rypuop.stripocdn.email/content/guids/CABINET_cffa413c5ccab048888fec6cc485b815f8f80028a73882101227ae6949ec8f11/images/387321979_687594463281792_7574468668499025541_n.jpg"
+                          src="/src/assets/img/avatar.png"
                           style="width: 140px; height: 140px"
                           alt="Admin"
                           class="rounded-circle p-1 bg-primary"
